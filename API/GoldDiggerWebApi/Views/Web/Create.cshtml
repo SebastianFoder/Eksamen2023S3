@@ -1,0 +1,48 @@
+﻿@model GoldDiggerWebApi.Models.ClassApiResponds
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ClassApiResponds</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="metalName" class="control-label"></label>
+                <input asp-for="metalName" class="form-control" />
+                <span asp-validation-for="metalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="priceDkkPerKg" class="control-label"></label>
+                <input asp-for="priceDkkPerKg" class="form-control" />
+                <span asp-validation-for="priceDkkPerKg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="priceEurPerKg" class="control-label"></label>
+                <input asp-for="priceEurPerKg" class="form-control" />
+                <span asp-validation-for="priceEurPerKg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="priceUsdPerKg" class="control-label"></label>
+                <input asp-for="priceUsdPerKg" class="form-control" />
+                <span asp-validation-for="priceUsdPerKg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,22 @@
+UCCustomer
+ - Update button
+    - When customer is selected (doesnt find id)
+ - Add new button
+    - null Exeption
+       - System.ArgumentNullException: 'Value cannot be null.
+	 Parameter name: Children of 'System.Windows.Controls.UIElementCollection' 
+	 cannot be null. Object derived from UIElement expected.'
+ - Delete button
+    - IsEnabled
+
+UCCustomerEdit
+ - Binding
+
+UCInvoice
+ - ALL
+
+UCMetalPriceInfo
+ - ALL
+
+UCMetalPriceEdit
+ - ALL

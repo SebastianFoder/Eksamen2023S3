@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>1529</w>
+      <h>792</h>
+    </coordinates>
+    <panel_attributes>Project GoldDiggerWebApi
+--
+bg=white
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>22</x>
+      <y>55</y>
+      <w>1485</w>
+      <h>715</h>
+    </coordinates>
+    <panel_attributes>WebApiGoldDigger
+--
+layer=2
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>55</x>
+      <y>121</y>
+      <w>286</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>Program
+--
+
+--
+
+*Skal indeholde standard metoder*
+*som auto gen. af udviklingsmiljøet*
+
+--
+Responsibilities
+
+*Gennererer HOST og kalder StartUp*
+
+layer=3
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>55</x>
+      <y>418</y>
+      <w>286</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>Startup
+--
+
+--
+
+*Skal indeholde standard metoder*
+*som auto gen. af udviklingsmiljøet*
+
+*I metoden ConfigureServices*
+*angives hvilken Server og Database*
+*der skal anvendes*
+
+--
+Responsibilities
+
+*Configurerer DB conection*
+*og starter div. services*
+
+layer=3
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>396</x>
+      <y>99</y>
+      <w>715</w>
+      <h>649</h>
+    </coordinates>
+    <panel_attributes>FOLDER: Models
+--
+
+layer=3
+bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>781</x>
+      <y>143</y>
+      <w>319</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>Coustomer
+--
+
+*Opret de property der skal bruges*
+
+--
+
+
+--
+Responsibilities
+
+*Holder de property der danner grundlag*
+*for en tabel med kunder i databasen*
+layer=4
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>781</x>
+      <y>440</y>
+      <w>319</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>PreciusMetal
+--
+
+*Opret de property der skal bruges*
+
+--
+
+
+--
+Responsibilities
+
+*Holder de property der danner grundlag*
+*for en tabel med ædle metaller og dere*
+*pris i databasen*
+layer=4
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>429</x>
+      <y>484</y>
+      <w>319</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>Rate
+--
+
+*Opret de property der skal bruges*
+
+--
+
+
+--
+Responsibilities
+
+*Holder de property der danner grundlag*
+*for en tabel med USD og EUR kursen i *
+*forhold til DKK i databasen*
+layer=4
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1144</x>
+      <y>99</y>
+      <w>341</w>
+      <h>649</h>
+    </coordinates>
+    <panel_attributes>FOLDER: Controlers
+--
+
+layer=3
+bg=light_gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>143</y>
+      <w>319</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>PreciusMetalController
+--
+
+*Opret de HTTP Action metoder*
+*der skal bruges*
+
+--
+
+
+--
+Responsibilities
+
+*Holder de metoder der generere*
+*de forskellige typer svar*
+*man ønsker at stille til rådighed via API*
+layer=4
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>429</x>
+      <y>143</y>
+      <w>319</w>
+      <h>319</h>
+    </coordinates>
+    <panel_attributes>GoldDiggerContext
+--
+
+*Opret de metoder der skal bruges*
+
+--
+
+
+--
+Responsibilities
+
+*Holder de DbSet property der danner*
+*forbindelsen til DB*
+
+*Opret en OnModelCreating*
+*der indsætter data i:*
+*            Rate *
+*            PreciusMetal *
+*            Customer *
+layer=4
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

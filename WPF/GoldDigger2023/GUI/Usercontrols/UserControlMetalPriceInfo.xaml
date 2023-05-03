@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="GUI.Usercontrols.UserControlMetalPriceInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI.Usercontrols"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" 
+             d:DesignWidth="400"
+             Loaded="UserControl_Loaded">
+    <Grid x:Name="MainGrid"
+          Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        
+        <GroupBox x:Name="ContactInfoBox"
+                  Header="Kontakt oplysninger"
+                  Grid.Row="0"
+                  Margin="10">
+            <StackPanel>
+                <TextBlock>Gold Digger A/S</TextBlock>
+                <TextBlock>Sølvgade 89</TextBlock>
+                <TextBlock>1307 København K</TextBlock>
+                <TextBlock>Tlf. nr. 21 57 84 33</TextBlock>
+                <TextBlock>Mail: salg@golddigger.dk</TextBlock>
+            </StackPanel>
+        </GroupBox>
+
+        <WebBrowser x:Name="APIWebBrowser"
+                    HorizontalAlignment="Stretch"
+                    OverridesDefaultStyle="false"
+                    ScrollViewer.CanContentScroll="False"
+                    ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                    Margin="0"
+                    Grid.Row="2"
+                    Grid.RowSpan="20"
+                    VerticalAlignment="Stretch"
+                    Source="https://localhost:44370/"/>
+    </Grid>
+</UserControl>

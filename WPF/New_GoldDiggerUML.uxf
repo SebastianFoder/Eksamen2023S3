@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>412</x>
+      <y>60</y>
+      <w>820</w>
+      <h>792</h>
+    </coordinates>
+    <panel_attributes>Project GoldDigger
+--
+bg=white
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>988</x>
+      <y>512</y>
+      <w>152</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*ClassNotify*
+--
++PropertyChanged: PropertyChangedEventHandler Event
+--
+#Notify(string) : void
+--
+Responsibilities
+
+*Skal sikre at hændelser i property sendes til GUI*
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>520</x>
+      <y>84</y>
+      <w>188</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>GUI
+--
+bg=orange
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>776</x>
+      <y>148</y>
+      <w>208</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>BIZ
+--
+bg=orange
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1032</x>
+      <y>148</y>
+      <w>140</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>IO
+--
+bg=orange
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>436</x>
+      <y>456</y>
+      <w>772</w>
+      <h>376</h>
+    </coordinates>
+    <panel_attributes>Repository
+--
+bg=orange
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>100</y>
+      <w>144</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>*MainWindow*
+--
+- Skal holde en instans af ClassBIZ
+- Skal holde en instans af de UserControl 
+- der skal benyttes
+--
+
+Responsibilities
+
+*Skal kun indeholde funktioner der*
+*knytter sig direkte til objekter på*
+*brugergrænsefladen*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>184</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*UserControlCustomer*
+--
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>804</x>
+      <y>164</y>
+      <w>164</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*ClassBIZ*
+--
+- Skal holde en instans af ClassIO
+--
+
+/Constructor der initialisere alle Property og Fields/
+
+--
+Responsibilities
+
+*Skal indeholde de Property og Fields*
+*der er nødvendige for at holde valgt bruger*
+
+*Skal indeholde de Property og Fields*
+*der er nødvendige for at holde valgt kunde*
+
+*Skal indeholde de Property og Fields*
+*der er nødvendige for at holde en liste af kunder*
+
+*Skal indeholde de Property og Fields*
+*der er nødvendige for at holde valgt Metal*
+
+*Skal indeholde de Property og Fields*
+*der er nødvendige for at holde en liste af Metaller*
+
+*Skal indeholde de nødvendige metoder til understøttelse*
+*af funktionalitet i applikationen og kommunikation*
+*med ClassIO*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>160</y>
+      <w>120</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*ClassDbCon*
+--
+-connectionString: string
+-con: SqlConnection
+-command: SqlCommand
+--
+
+/Constructor der initialisere ConnectionString/
+
+--
+Responsibilities
+
+*Skal indeholde de Metoder og Fields*
+*der er nødvendige for at kommunikere*
+*med en database*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>292</y>
+      <w>124</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>*ClassControlerDB*
+--
+
+--
+
+/Constructor skal kalde base klassen/
+/med en parameter der indeholder en/
+/connectionstring/
+
+--
+Responsibilities
+
+*Skal indeholde de Metoder og Fields*
+*der er nødvendige for at skabe de*
+*rette forespørgelser til databasen*
+*og giver de rette datatyper som svar*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>620</y>
+      <w>128</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*ClassCustomer*
+--
+- _Name: string
+- _Address: ClassAddress
+
+--
+«property» + _Name: string
+«property» + Address: ClassAddress
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1084</x>
+      <y>256</y>
+      <w>12</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>468</y>
+      <w>316</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>770.0;110.0;770.0;10.0;10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>380</y>
+      <w>208</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>500.0;330.0;500.0;110.0;350.0;110.0;350.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>288</y>
+      <w>80</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>288</y>
+      <w>60</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>304</y>
+      <w>172</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>410.0;400.0;410.0;320.0;100.0;320.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>876</x>
+      <y>400</y>
+      <w>12</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>12.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>904</x>
+      <y>400</y>
+      <w>200</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+layer=4</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;90.0;480.0;90.0;480.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>512</y>
+      <w>128</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*ClassEntity*
+--
+- _Id: int
+
+--
+
+«property» + Id: int (readonly)
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>488</y>
+      <w>40</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IPersistable
+layer=3</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>628</y>
+      <w>84</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>*ClassProduct*
+--
+- _Name: string
+- _DkkPrice: double
+- _EurPrice: double
+- _UsdPrice: double
+- _Stock: ClassStock
+--
+
+«property» + Name: string
+«property» + DkkPrice: double
+«property» + EurPrice: double
+«property» + UsdPrice: double
+«property» + Stock: ClassStock
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>704</y>
+      <w>164</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*ClassInvoice*
+--
+- _Orderlines : List&lt;ClassOrderLine&gt;
+- _OrderCustomer : ClassCoustomer
+--
+«property» + Orderlines : List&lt;ClassOrderLine&gt;
+«property» + OrderCustomer : ClassCoustomer
+
++ GetPaymentAmount() : decimal
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1068</x>
+      <y>620</y>
+      <w>100</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*/ClassEmployee/*
+--
+- _name: string
+- _Address: ClassAddress
+--
+«property» + Name: string
+«property» + Address: ClassAddress
+
+/+ Earnings() : decimal/
++ GetPaymentAmount() : decimal
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>596</x>
+      <y>680</y>
+      <w>32</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IPayable
+layer=3</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1092</x>
+      <y>596</y>
+      <w>32</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IPayable
+layer=3</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>564</y>
+      <w>196</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>470.0;10.0;470.0;50.0;10.0;50.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>564</y>
+      <w>104</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;240.0;80.0;240.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>724</x>
+      <y>564</y>
+      <w>412</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;1010.0;50.0;1010.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>652</x>
+      <y>564</y>
+      <w>52</w>
+      <h>148</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;290.0;10.0;290.0;10.0;350.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1072</x>
+      <y>708</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*BaseSalariedEmployee*
+--
+# salary : decimal
+--
++ Earnings() : decimal
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>764</y>
+      <w>96</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>*SalesRepresentative*
+--
+# weeklySales : decimal
+# commisionRate : double
+--
++ Earnings() : decimal
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1084</x>
+      <y>488</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=INotifyPropertyChanged
+layer=3</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>740</y>
+      <w>100</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>*ClassStock*
+--
+- _Warehouse: string
+- _StorageRack: string
+- _Shelf: string
+- _StockQuantity: double
+--
+
+«property» + Warehouse: string
+«property» + StorageRack: string
+«property» + Shelf: string
+«property» + StockQuantity: double
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>712</y>
+      <w>16</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>548</x>
+      <y>640</y>
+      <w>52</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1
+layer=3</panel_attributes>
+    <additional_attributes>110.0;10.0;60.0;10.0;60.0;70.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>644</y>
+      <w>32</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1
+layer=3</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>592</x>
+      <y>620</y>
+      <w>96</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>*ClassOrderLine*
+--
+-_Product: ClassProduct
+-_Quantity: double
+--
+«property» + Product: ClassProduct
+«property» + Quantity: double
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>664</y>
+      <w>20</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1..*
+layer=3</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1104</x>
+      <y>684</y>
+      <w>12</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>736</y>
+      <w>164</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>390.0;10.0;390.0;40.0;10.0;40.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>620</y>
+      <w>128</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>*ClassAddress*
+--
+- _StreetName: string
+- _ZipCity: string
+- _Country: string
+- _Phone: string
+- _MailAdr: string
+
+--
+«property» + _StreetName: string
+«property» + _ZipCity: string
+«property» + _Country: string
+«property» + _Phone: string
+«property» + _MailAdr: string
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>812</x>
+      <y>596</y>
+      <w>116</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1
+layer=3</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0;260.0;10.0;260.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>992</x>
+      <y>596</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=1
+m2=1
+layer=3</panel_attributes>
+    <additional_attributes>230.0;60.0;230.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1084</x>
+      <y>764</y>
+      <w>96</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>*WarehousedEmployee*
+--
+# DangerSupplement : decimal
+# ExperienceBonus : double
+--
++ Earnings() : decimal
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1124</x>
+      <y>736</y>
+      <w>12</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+layer=3</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>772</x>
+      <y>732</y>
+      <w>88</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>IPayable
+--
++ GetPaymentAmount() : decimal
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>776</x>
+      <y>692</y>
+      <w>76</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>IPersistable
+--
++ Id : int &lt;&lt;prop&gt;&gt; {readonly}
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>220</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*UserControlCustomerEdit*
+--
+
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>256</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*UserControlDataRelatingToEmployees*
+--
+
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>292</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*UserControlInvoice*
+--
+
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>328</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*UserControlMetalPriceEdit*
+--
+
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>368</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>*UserControlMetalPriceInfo*
+--
+
+
+
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

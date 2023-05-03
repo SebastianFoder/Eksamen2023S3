@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>60</x>
+      <y>40</y>
+      <w>960</w>
+      <h>640</h>
+    </coordinates>
+    <panel_attributes>GoldDiggerConsole
+--
+bg=white
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>100</x>
+      <y>90</y>
+      <w>830</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>ConsoleApp
+--
+bg=orange
+layer=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>140</y>
+      <w>360</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*MainGoldDigger*
+--
+- apiCall: ApiCall
+- usdRate: USDRate
+--
+- StartTimer() async: void
+- GetDollarRateFromAPI() async: void
+- UpdateDatabaseWithDollarRate() async: void
+--
+Responsibilities
+
+*Skal hvert minut hente den nye dollar kurs*
+*via en WEB-API og opdatere DB med den nye kurs*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>140</y>
+      <w>360</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*ApiCall*
+--
+
+--
+
++ GetJSONFromOpenExchangeRates() async: void
+
+--
+Responsibilities
+
+*Opretter forbindelse til API WEB-server*
+*og returnere modtaget svar som string*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>360</y>
+      <w>370</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*USDRate*
+--
++ disclaimer {+ get; + set;}: string
++ license {+ get; + set;}: string
++ timestamp {+ get; + set;}: long
++ base {+ get; + set;}: string
++ rates {+ get; + set;}: Dictionary&lt;string, decimal&gt;
+
+--
+
+--
+Responsibilities
+
+*Denne class skal holde resultatet*
+*fra API kaldet OpenExchangeRates.org*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>360</y>
+      <w>360</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*DbCall*
+--
+- myConnection: SqlConnection
+--
+
+- OpenDB(): void
+- CloseDB(): void
++ UpdateRateInDB() async: int
+
+--
+Responsibilities
+
+*Opretter forbindelse til databasen og*
+*opdatere valutakurserne for EUR og USD*
+*med kurs i DKK og timestamp for opdatering*
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
